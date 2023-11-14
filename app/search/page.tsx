@@ -10,10 +10,10 @@ type SearchPageProps = {
   };
 };
 
+export const revalidate = 0;
+
 const Search = async ({ searchParams }: SearchPageProps) => {
   const songs = await getSongsByTitle(searchParams.title);
-
-  console.log(songs);
 
   return (
     <div className="bg-neutral-900 overflow-hidden overflow-y-auto rounded-lg h-full w-full">

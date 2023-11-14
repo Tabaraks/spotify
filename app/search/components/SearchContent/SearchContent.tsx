@@ -3,6 +3,7 @@ import SongItem from "@/app/(site)/components/SongItem";
 import MediaItem from "@/components/MediaItem";
 import { Song } from "@/types";
 import React from "react";
+import LikeButton from "../LikeButton";
 
 type SearchContentProps = {
   songs: Song[];
@@ -23,6 +24,7 @@ const SearchContent = ({ songs }: SearchContentProps) => {
             <div className="flex-1">
               <MediaItem data={song} onClick={() => {}} />
             </div>
+            <LikeButton songId={song.id} />
           </div>
         ))}
       </div>
