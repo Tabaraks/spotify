@@ -100,7 +100,7 @@ const PlayerContent = ({ songUrl, songs }: PlayerContentProps) => {
             <LikeButton songId={songs.id} />
           </div>
         </div>
-        <div className="flex md:hidden col-auto w-full items-center">
+        <div className="flex md:hidden justify-end col-auto w-full items-center">
           <AiFillStepBackward
             onClick={onPlayPrevious}
             size={30}
@@ -118,14 +118,7 @@ const PlayerContent = ({ songUrl, songs }: PlayerContentProps) => {
             onClick={onPlayNext}
           />
         </div>
-        <div className="flex md:hidden items-center gap-x-2 w-[220px]">
-          <VolumeIcon
-            onClick={toggleMute}
-            size={30}
-            className="cursor-pointer"
-          />
-          <Slider value={volume} onChange={(value) => setVolume(value)} />
-        </div>
+
         <div className="hidden h-full md:flex justify-center items-center w-full max-w-[722px] gap-x-6">
           <AiFillStepBackward
             onClick={onPlayPrevious}
