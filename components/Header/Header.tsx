@@ -59,10 +59,16 @@ const Header = ({ children, classname }: HeaderProps) => {
           </button>
         </div>
         <div className="flex md:hidden gap-x-2 items-center">
-          <button className="rounded-full flex items-center justify-center p-2 bg-white cursor-pointer hover:opacity-75 transition">
+          <button
+            onClick={() => router.push("/")}
+            className="rounded-full flex items-center justify-center p-2 bg-white cursor-pointer hover:opacity-75 transition"
+          >
             <HiHome className="text-black" size={20} />
           </button>
-          <button className="rounded-full flex items-center justify-center p-2 bg-white cursor-pointer hover:opacity-75 transition">
+          <button
+            onClick={() => router.push("/search")}
+            className="rounded-full flex items-center justify-center p-2 bg-white cursor-pointer hover:opacity-75 transition"
+          >
             <BiSearch className="text-black" size={20} />
           </button>
         </div>
