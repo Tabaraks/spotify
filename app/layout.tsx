@@ -8,6 +8,7 @@ import ModalProvider from "@/providers/ModalProvider";
 import ToasterProvider from "@/providers/ToasterProvider";
 import getSongsByUserId from "@/actions/getSongsByUserId";
 import Player from "@/components/Player";
+import SpotifyToken from "@/components/SpotifyToken";
 
 const fig = Figtree({ subsets: ["latin"] });
 
@@ -30,9 +31,11 @@ export default async function RootLayout({
         <ToasterProvider />
         <SupabaseProvider>
           <UserProvider>
-            <ModalProvider />
-            <Sidebar songs={userSong}>{children}</Sidebar>
-            <Player />
+            <SpotifyToken>
+              <ModalProvider />
+              <Sidebar songs={userSong}>{children}</Sidebar>
+              <Player />
+            </SpotifyToken>
           </UserProvider>
         </SupabaseProvider>
       </body>

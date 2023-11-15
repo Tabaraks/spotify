@@ -28,7 +28,6 @@ const Header = ({ children, classname }: HeaderProps) => {
 
   const handleLogout = async () => {
     const { error } = await supabaseClient.auth.signOut();
-    //Reset Playing Song
     router.refresh();
     if (error) {
       toast.error(error.message);

@@ -8,7 +8,7 @@ import { HiSpeakerWave, HiSpeakerXMark } from "react-icons/hi2";
 import useSound from "use-sound";
 import Slider from "../Slider";
 import usePlayer from "@/hooks/usePlayer";
-import SongSlider from "../SongSlider";
+import ProgressBar from "../ProgressBar";
 
 type PlayerContentProps = {
   songs: Song;
@@ -149,7 +149,7 @@ const PlayerContent = ({ songUrl, songs }: PlayerContentProps) => {
           </div>
         </div>
       </div>
-      <SongSlider howl={sound} onChange={(value) => setProgress(value)} />
+      <ProgressBar howl={sound} onChange={(value) => setProgress(value)} />
     </div>
   );
 };
