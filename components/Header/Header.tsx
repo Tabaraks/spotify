@@ -63,7 +63,7 @@ const Header = ({ children, classname }: HeaderProps) => {
             onClick={() => router.push("/")}
             className="rounded-full flex items-center justify-center p-2 bg-white cursor-pointer hover:opacity-75 transition"
           >
-            <HiHome className="text-black" size={20} />
+            <HiHome className="text-[#000]" size={20} />
           </button>
           <button
             onClick={() => router.push("/search")}
