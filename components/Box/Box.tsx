@@ -9,7 +9,7 @@ type BoxProps = {
 const Box = ({ children, classname }: BoxProps) => {
   return (
     <div
-      className={twMerge(`bg-neutral-900 rounded-lg w-full h-fit`, classname)}
+      className={twMerge(`bg-neutral-900 rounded-lg w-[100%] h-fit`, classname)}
     >
       {children}
     </div>
